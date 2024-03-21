@@ -26,7 +26,8 @@ public class PhoneBuilder {
         return this;
     }
 
-    public Phone build() {
-        return new Phone(make, model, price, qty);
+    public Phone build(PhoneBuilder this) {
+
+        return new Phone(this.make, this.model, this.price, this.qty);
     }
 }
